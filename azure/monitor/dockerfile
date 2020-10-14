@@ -1,5 +1,5 @@
 FROM openjdk:15-alpine
 WORKDIR /usr/src/app
 COPY target/orchestrator-0.0.1-SNAPSHOT.jar .
-EXPOSE 8080
+EXPOSE 80
 CMD [ "java", "-jar", "/usr/src/app/orchestrator-0.0.1-SNAPSHOT.jar" ]

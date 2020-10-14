@@ -1,0 +1,9 @@
+version: '2.1'
+
+services:
+  monitor:
+    build: azure/monitor
+    image: seddiks/experimentation:azure-monitor
+    mem_limit: 350m
+    ports:
+      - "8080:8080"

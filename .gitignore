@@ -37,3 +37,10 @@ build/
 .doit.db.dat
 .doit.db.dir
 __pycache__
+
+### Terraform ###
+# Local .terraform directories
+**/.terraform/*
+# .tfstate files
+*.tfstate
+*.tfstate.*
