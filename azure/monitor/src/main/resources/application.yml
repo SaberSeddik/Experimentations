@@ -4,3 +4,7 @@ server:
 spring:
   application:
     name: monitor
+
+azure:
+  application-insights:
+    instrumentation-key: fc197122-2104-4a8e-a371-ad87d71832cf
