@@ -1,5 +1,7 @@
 package io.saber.experimentation.monitor.servicea;
 
+import com.azure.opentelemetry.exporters.azuremonitor.AzureMonitorExporter;
+import com.azure.opentelemetry.exporters.azuremonitor.AzureMonitorExporterBuilder;
 import io.saber.experimentation.YamlPropertySourceFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>io.saber</groupId>
-        <artifactId>services</artifactId>
+        <artifactId>observability</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <artifactId>monitor</artifactId>
@@ -31,28 +31,30 @@
             <artifactId>azure-servicebus-jms-spring-boot-starter</artifactId>
             <version>2.1.7</version>
         </dependency>
-        <!--		<dependency>-->
-        <!--			<groupId>io.opentelemetry</groupId>-->
-        <!--			<artifactId>opentelemetry-api</artifactId>-->
-        <!--			<version>0.9.1</version>-->
-        <!--		</dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-sleuth</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-zipkin</artifactId>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>com.microsoft.azure</groupId>
             <artifactId>azure-servicebus</artifactId>
             <version>3.3.0</version>
         </dependency>
 <!--        <dependency>-->
-<!--            <groupId>io.zipkin.brave</groupId>-->
-<!--            <artifactId>brave-context-slf4j</artifactId>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-sleuth</artifactId>-->
 <!--        </dependency>-->
+        <dependency>
+            <groupId>com.azure</groupId>
+            <artifactId>opentelemetry-exporters-azuremonitor</artifactId>
+            <version>1.0.0-beta.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.opentelemetry</groupId>
+            <artifactId>opentelemetry-api</artifactId>
+            <version>0.9.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.opentelemetry</groupId>
+            <artifactId>opentelemetry-extension-auto-annotations</artifactId>
+            <version>0.9.1</version>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>

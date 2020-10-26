@@ -3,6 +3,7 @@ package io.saber.experimentation.monitor.servicea.controllers;
 import com.microsoft.azure.servicebus.Message;
 import com.microsoft.azure.servicebus.TopicClient;
 import com.microsoft.azure.servicebus.primitives.ConnectionStringBuilder;
+import io.opentelemetry.extensions.auto.annotations.WithSpan;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -23,6 +24,7 @@ public class CallServiceDOverAmqp {
     private String connectionString;
 
     @SneakyThrows
+    @WithSpan
     public void call() {
         LOGGER.info("Service A: Calling D server over amqp");
         TopicClient sendClient = new TopicClient(new ConnectionStringBuilder(connectionString, TOPIC_NAME));

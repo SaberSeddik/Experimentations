@@ -1,0 +1,39 @@
+extensions:
+  health_check:
+  zpages:
+    endpoint: 0.0.0.0:55679
+
+receivers:
+  otlp:
+    protocols:
+        grpc:
+
+processors:
+  batch:
+  attributes/newenvironment:
+    actions:
+    - key: environment
+      value: "experimentation"
+      action: insert
+  queued_retry:
+
+exporters:
+  logging:
+  zipkin:
+    endpoint: "http://tracing-server:9411/api/v2/spans"
+  azuremonitor:
+    instrumentation_key: fc197122-2104-4a8e-a371-ad87d71832cf
+  prometheus:
+    endpoint: "0.0.0.0:8889"
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch, attributes/newenvironment, queued_retry]
+      exporters: [logging, zipkin, azuremonitor]
+    metrics:
+      receivers: [ otlp ]
+      processors: [ batch ]
+      exporters: [ logging, prometheus]
+  extensions: [health_check, zpages]

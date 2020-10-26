@@ -1,5 +1,6 @@
 package io.saber.experimentation.monitor.servicea.controllers;
 
+import io.opentelemetry.extensions.auto.annotations.WithSpan;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,7 @@ public class CallServiceBOverHttp {
     @Autowired
     private final RestTemplate restTemplate;
 
+    @WithSpan
     public void call() throws URISyntaxException {
         LOGGER.info("Service A: Calling B server over http");
         URI uri = new URI("http://localhost:8082/log/from-serviceA-to-serviceB");
