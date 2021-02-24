@@ -7,10 +7,10 @@
         <artifactId>azure</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>monitor</artifactId>
+    <artifactId>app-config</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>monitor</name>
-    <description>Monitoring testing</description>
+    <name>app-config</name>
+    <description>Application Configuration</description>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -36,10 +36,6 @@
             <artifactId>azure-servicebus</artifactId>
             <version>3.3.0</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-sleuth</artifactId>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>com.azure</groupId>
             <artifactId>opentelemetry-exporters-azuremonitor</artifactId>

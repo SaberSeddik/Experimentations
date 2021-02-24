@@ -7,15 +7,16 @@
         <artifactId>experimentation</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>observability</artifactId>
+    <artifactId>azure</artifactId>
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
-    <name>observability</name>
-    <description>observability experimentation</description>
+    <name>azure</name>
+    <description>azure experimentation</description>
 
     <modules>
         <module>monitor</module>
         <module>opentelemetry</module>
+        <module>app-config</module>
     </modules>
 
 </project>

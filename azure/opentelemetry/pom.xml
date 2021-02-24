@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>io.saber</groupId>
-        <artifactId>services</artifactId>
+        <artifactId>azure</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <artifactId>opentelemetry</artifactId>
