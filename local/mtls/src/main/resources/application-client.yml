@@ -1,0 +1,13 @@
+client:
+  ssl:
+    one-way-authentication-enabled: false
+    two-way-authentication-enabled: true
+    key-store: file://C:\Users\seddi\projects\Experimentations\local\mtls\certificates\client.jks
+    key-store-password: 98253915
+    key-password: 98253915
+    trust-store=: file://C:\Users\seddi\projects\Experimentations\local\mtls\certificates\client.jks
+    trust-store-password: 98253915
+
+logging:
+  level:
+    root: info

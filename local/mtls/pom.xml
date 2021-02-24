@@ -7,19 +7,21 @@
         <artifactId>azure</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>app-config</artifactId>
+    <artifactId>mtls</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>app-config</name>
-    <description>Application Configuration</description>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.microsoft.azure</groupId>
-            <artifactId>spring-cloud-azure-appconfiguration-config</artifactId>
-            <version>1.2.7</version>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.azure.spring</groupId>
+            <artifactId>azure-spring-boot-starter-keyvault-certificates</artifactId>
+            <version>3.0.0-beta.3</version>
         </dependency>
     </dependencies>
     <dependencyManagement>

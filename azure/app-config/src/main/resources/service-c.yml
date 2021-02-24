@@ -1,9 +1,0 @@
-spring:
-  application:
-    name: serviceC
-  jms:
-    servicebus:
-      topic-client-id: serviceC
-server:
-  port: 8083
-

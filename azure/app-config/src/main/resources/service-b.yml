@@ -1,9 +1,0 @@
-spring:
-  application:
-    name: serviceB
-  jms:
-    servicebus:
-      topic-client-id: serviceB
-server:
-  port: 8082
-

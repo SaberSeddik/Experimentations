@@ -1,0 +1,17 @@
+server:
+  port: 8443
+  ssl:
+    enabled: true
+#    key-store: C:\Users\seddi\projects\Experimentations\local\mtls\certificates\server.jks
+#    key-store-password: 98253915
+#    trust-store=: C:\Users\seddi\projects\Experimentations\local\mtls\certificates\server.jks
+#    trust-store-password: 98253915
+    key-alias: server
+    key-store-type: AzureKeyVault
+    client-auth: need
+azure:
+  keyvault:
+    uri:
+logging:
+  level:
+    root: info
