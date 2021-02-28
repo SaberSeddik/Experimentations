@@ -11,7 +11,7 @@ server:
     client-auth: need
 azure:
   keyvault:
-    uri:
+    uri: https://seddiks-kv.vault.azure.net/
 logging:
   level:
     root: info
