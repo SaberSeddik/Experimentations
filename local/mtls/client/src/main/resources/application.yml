@@ -1,0 +1,13 @@
+server:
+  ssl:
+    enabled: false
+azure:
+  keyvault:
+    uri: https://seddiks-kv.vault.azure.net/
+    client-id: 4e8b635a-354d-4383-9ab7-aef05ca476a8
+    tenant-id: 8d09f28d-2b54-4761-98f1-de38762cd939
+    client-secret: 0.~~9_v3~DatkA-3ibMVifuMBXz_hHH06h
+
+logging:
+  level:
+    root: info

@@ -2,19 +2,16 @@ server:
   port: 8443
   ssl:
     enabled: true
-#    key-store: C:\Users\seddi\projects\Experimentations\local\mtls\certificates\server.jks
-#    key-store-password: 98253915
-#    trust-store=: C:\Users\seddi\projects\Experimentations\local\mtls\certificates\server.jks
-#    trust-store-password: 98253915
     key-alias: server
     key-store-type: AzureKeyVault
+    trust-store-type: AzureKeyVault
     client-auth: need
 azure:
   keyvault:
     uri: https://seddiks-kv.vault.azure.net/
     client-id: 4e8b635a-354d-4383-9ab7-aef05ca476a8
     tenant-id: 8d09f28d-2b54-4761-98f1-de38762cd939
-    secret: 0.~~9_v3~DatkA-3ibMVifuMBXz_hHH06h
+    client-secret: 0.~~9_v3~DatkA-3ibMVifuMBXz_hHH06h
 logging:
   level:
     root: info

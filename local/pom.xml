@@ -7,10 +7,9 @@
         <artifactId>experimentation</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>azure</artifactId>
+    <artifactId>local</artifactId>
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
-    <name>local</name>
 
     <modules>
         <module>mtls</module>
