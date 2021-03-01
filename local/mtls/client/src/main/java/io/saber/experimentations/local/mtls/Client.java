@@ -1,5 +1,6 @@
 package io.saber.experimentations.local.mtls;
 
+import com.azure.security.keyvault.jca.KeyVaultJcaProvider;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.client.HttpClient;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
@@ -9,6 +10,7 @@ import org.apache.http.ssl.PrivateKeyDetails;
 import org.apache.http.ssl.PrivateKeyStrategy;
 import org.apache.http.ssl.SSLContexts;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
@@ -25,11 +27,21 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSession;
 import java.net.Socket;
 import java.security.KeyStore;
+import java.security.Security;
 import java.util.Map;
 
 @Slf4j
 @SpringBootApplication
 public class Client {
+
+    @Value("${azure.keyvault.uri}")
+    private String keyvaultUri;
+    @Value("${azure.keyvault.tenant-id}")
+    private String tenantId;
+    @Value("${azure.keyvault.client-id}")
+    private String clientId;
+    @Value("${azure.keyvault.client-secret}")
+    private String clientSecret;
 
     @Autowired
     private RestTemplate restTemplate;
@@ -64,6 +76,12 @@ public class Client {
     }
 
     private HttpClient httpClient() throws Exception {
+        System.setProperty("azure.keyvault.uri", keyvaultUri);
+        System.setProperty("azure.keyvault.tenant-id", tenantId);
+        System.setProperty("azure.keyvault.client-id", clientId);
+        System.setProperty("azure.keyvault.client-secret", clientSecret);
+        KeyVaultJcaProvider provider = new KeyVaultJcaProvider();
+        Security.addProvider(provider);
         KeyStore ks = KeyStore.getInstance("AzureKeyVault");
         ks.load(null);
         SSLContext sslContext = SSLContexts.custom()
