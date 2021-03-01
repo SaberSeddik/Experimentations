@@ -23,10 +23,5 @@
             <artifactId>azure-security-keyvault-jca</artifactId>
             <version>1.0.0-beta.3</version>
         </dependency>
-        <dependency>
-            <groupId>com.azure.spring</groupId>
-            <artifactId>azure-spring-boot-starter-keyvault-certificates</artifactId>
-            <version>3.0.0-beta.3</version>
-        </dependency>
     </dependencies>
 </project>
